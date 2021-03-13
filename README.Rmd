@@ -1,0 +1,20 @@
+---
+title: "textBits: Bits and Pieces of Code for Acquiring, Cleaning, and Working with Text"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+devtools::source_gist("c83e078bf8c81b035e32c3fc0cf04ee8", 
+                      filename = 'render_toc.R')
+```
+
+This is a clearinghouse for bits and pieces of code pertaining to gathering, cleaning, and working with text. In many cases, the code here will have been put together to help a researcher with a specific problem; if I think it might be more broadly useful, I'll share it here. And some of these items are just bits that I think are kind of cool.
+
+```{r toc, echo=FALSE} 
+render_toc("README.Rmd")
+```
+
+## Prepping Data from Specific Sources
+### Prepping News Articles from Nexis Uni
+The `processNexisNews` function reads PDFs of news articles downloaded from Nexis Uni into R, domes some parsing and cleaning, and stores as a dataframe. See the vignette for a quick overview.
