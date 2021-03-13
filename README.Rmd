@@ -16,5 +16,10 @@ render_toc("README.Rmd")
 ```
 
 ## Prepping Data from Specific Sources
-### Prepping News Articles from Nexis Uni
-The `processNexisNews` function reads PDFs of news articles downloaded from Nexis Uni into R, domes some parsing and cleaning, and stores as a dataframe. See the vignette for a quick overview.
+### Prepping News Articles from Nexis Uni (Folder: `nexisUniNews`)
+The `processNexisNews` function reads PDFs of news articles downloaded from Nexis Uni into R, domes some parsing and cleaning, and stores as a dataframe. Source the [`nexisFunctions.R `](https://github.com/burrowsdt/textBits/blob/main/nexisUniNews/nexisFunctions.R) file and then run the function with the filepath to the folder with all of your articles as an argument (see below). See the [vignette](https://github.com/burrowsdt/textBits/blob/main/nexisUniNews/NexisUniNewsArticles.pdf) for a quick overview.
+```{r message=FALSE, warning=FALSE, paged.print=FALSE}
+source("nexisUniNews/nexisFunctions.R")
+processNexisNews("nexisUniNews/data/")
+```
+
